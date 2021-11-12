@@ -1,0 +1,23 @@
+{
+  "env": {
+    "commonjs": true,
+    "es2020": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["prettier"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "rules": {
+    "prefer-const": "warn",
+    "no-var": "warn",
+    "no-multiple-empty-lines": "warn",
+    "no-console": 0
+  }
+}
