@@ -91,6 +91,13 @@ This app uses `mongoos` Object Data Modeling library to define Documents of the 
 Project database created in Atlas cloud. Connection is provided with
 `mongodb+srv://<username>:<password>@lab-cluster.5hnte.mongodb.net/irdetoi`
 
+![irdetoi-database](https://user-images.githubusercontent.com/6191308/141512590-e73233a5-7dd4-4fe6-b622-60af4926b8ab.png)
+
+![note-document-items](https://user-images.githubusercontent.com/6191308/141512651-7efcbb18-0266-4411-bf8b-66f8dfe64c0e.png)
+
+![user-document-item](https://user-images.githubusercontent.com/6191308/141512686-8d33a6d1-3ee5-46c4-93a1-85219e41597d.png)
+
+
 ### **Project Setup**
 
 Run `npm install` in the project folder.  
@@ -189,3 +196,19 @@ In both controller `express-validator` has used to verify `request` data and han
 In the `models` folder, `user` and `note` models have implemented.  
 This app uses `mongoos` Object Data Modeling library to implement schemas of the app documents. Visit https://mongoosejs.com/ for details.
 There are many functions implemented for user management in the `services` folder `user.service.js`.
+
+### **Testing**  
+
+Here are screenshots of `Postman` testing for the project.    
+
+![user_register](https://user-images.githubusercontent.com/6191308/141512900-d3aba10c-1949-41f8-ab9a-135a7e6e51e4.png)
+
+![user_login](https://user-images.githubusercontent.com/6191308/141512910-09bf6b36-6a04-49db-a956-709dd2e0f11c.png)
+
+![create_note](https://user-images.githubusercontent.com/6191308/141512937-697ddf74-ebdb-4baa-944f-e30ebc668434.png)
+
+![list_notes](https://user-images.githubusercontent.com/6191308/141512947-d550e2a8-99cb-4c51-905b-85a1efdfe0ea.png)
+
+
+
+
