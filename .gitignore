@@ -1,0 +1,2 @@
+# ignore ALL .env file
+config/*.env
