@@ -211,3 +211,13 @@ Here are screenshots of `Postman` testing for the project.
 ## **Deployment - Staging**
 
 App is deployed abd configured in `Heroku` cloud server. You can access through `Postman`.
+![Heroku - regiter](https://user-images.githubusercontent.com/6191308/141882861-3ff695c5-9b85-4d66-9b68-b1f4952b869a.png)
+
+![Heroku- add token](https://user-images.githubusercontent.com/6191308/141882921-1d94b66a-bf85-4af9-bcb7-8553f29d7dde.png)
+
+![Heroku - login](https://user-images.githubusercontent.com/6191308/141882868-26307fe1-bc12-4a25-9d05-7653ccc0df01.png)
+
+![Heroku - create note](https://user-images.githubusercontent.com/6191308/141882897-b63c683b-a59a-4278-b606-63ae2e637022.png)
+
+![Heroku - get notes](https://user-images.githubusercontent.com/6191308/141882941-11d271e9-639a-4877-92a4-aa4900950ec6.png)
+
