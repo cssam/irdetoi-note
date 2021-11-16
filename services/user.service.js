@@ -29,6 +29,23 @@ class UserService {
   }
 
   /**
+   * Finds and returns a user by email, username, password
+   * @param {*} email
+   * @param {*} username
+   * @param {*} password
+   * @returns
+   */
+  static async findByEmailUsernamePassword(email, username, password) {
+    const user = await UserModel.findOne({ email, username }).exec();
+    const isValid = await user.comparePassword(password);
+    if (isValid) {
+      return user;
+    } else {
+      null;
+    }
+  }
+
+  /**
    * Creates a new user
    *
    * @param {*} username

@@ -78,35 +78,76 @@ exports.register = [
 ];
 
 // eslint-disable-next-line no-unused-vars
-exports.login = async (req, res, next) => {
-  try {
-    console.log(`at auth.controller login:`);
-    req.session.messages.push({
-      text: "You are logged in now!",
-      type: "success",
-    });
-    if (req.body.remember) {
-      req.sessionOptions.maxAge = 24 * 60 * 60 * 1000 * 14;
-      req.session.rememberme = req.sessionOptions.maxAge;
-    } else {
-      req.session.rememberme = null;
+exports.login = [
+  validation.validateUsername,
+  validation.validateEmail,
+  validation.validatePassword,
+  async (req, res, next) => {
+    try {
+      console.log(`at auth.controller login:`);
+      console.log("req.body: ", req.body);
+      const validationErrors = validation.validationResult(req);
+      console.log("validationErrors: ", validationErrors);
+      const errors = [];
+      if (!validationErrors.isEmpty()) {
+        validationErrors.errors.forEach((error) => {
+          errors.push(error.msg);
+          req.session.messages.push({
+            text: error.msg,
+            type: "danger",
+          });
+        });
+        console.log("errors: ", errors);
+      }
+      if (errors.length) {
+        return res.status(500).send(errors);
+      }
+      const existingUser = await UserService.findByEmailUsernamePassword(
+        req.body.email,
+        req.body.username,
+        req.body.password
+      );
+
+      console.log("existingUser: ", existingUser);
+
+      if (existingUser == null) {
+        errors.push("invalid email, username or password");
+        req.session.messages.push({
+          text: "The given email address or the username or password does not match!",
+          type: "danger",
+        });
+        return res.status(500).send(errors);
+      }
+
+      req.session.messages.push({
+        text: "You are logged in now!",
+        type: "success",
+      });
+      if (req.body.remember) {
+        req.sessionOptions.maxAge = 24 * 60 * 60 * 1000 * 14;
+        req.session.rememberme = req.sessionOptions.maxAge;
+      } else {
+        req.session.rememberme = null;
+      }
+
+      const token = jwt.sign(
+        {
+          userId: existingUser._id,
+        },
+        config.jwt_secret,
+        { expiresIn: "24h" }
+      );
+      res.status(200).json({
+        id: existingUser._id,
+        status: "You are logged in now!",
+        jwt: token,
+      });
+    } catch (err) {
+      console.log("err: ", err);
+      return res.status(500).send(err);
     }
-    const user = await UserService.findByEmail(req.body.email);
-    const token = jwt.sign(
-      {
-        userId: user._id,
-      },
-      config.jwt_secret,
-      { expiresIn: "24h" }
-    );
-    res
-      .status(200)
-      .json({ id: user.id, status: "You are logged in now!", jwt: token });
-  } catch (err) {
-    console.log("err: ", err);
-    return res.status(500).send(err);
-  }
-};
+  },
+];
 
 exports.verifyToken = (req, res, next) => {
   try {
