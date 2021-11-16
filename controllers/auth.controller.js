@@ -103,7 +103,8 @@ exports.login = async (req, res, next) => {
       .status(200)
       .json({ id: user.id, status: "You are logged in now!", jwt: token });
   } catch (err) {
-    //next(err);
+    console.log("err: ", err);
+    return res.status(500).send(err);
   }
 };
 
@@ -168,7 +169,8 @@ exports.currentUser = (req, res, next) => {
       username: req.user.username,
     });
   } catch (err) {
-    return next(err);
+    console.log("err: ", err);
+    return res.status(500).send(err);
   }
 };
 
@@ -182,6 +184,7 @@ exports.logout = (req, res, next) => {
     });
     res.status(200).json({ status: "You are logged out now!" });
   } catch (err) {
-    return next(err);
+    console.log("err: ", err);
+    return res.status(500).send(err);
   }
 };
