@@ -32,3 +32,5 @@ artifacts:
     - routes/**/*
     - package.json
     - server.js
+    - appspec.yml
+    - scripts/*
