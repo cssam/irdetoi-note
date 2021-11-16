@@ -97,7 +97,6 @@ Project database created in Atlas cloud. Connection is provided with
 
 ![user-document-item](https://user-images.githubusercontent.com/6191308/141512686-8d33a6d1-3ee5-46c4-93a1-85219e41597d.png)
 
-
 ### **Project Setup**
 
 Run `npm install` in the project folder.  
@@ -197,9 +196,9 @@ In the `models` folder, `user` and `note` models have implemented.
 This app uses `mongoos` Object Data Modeling library to implement schemas of the app documents. Visit https://mongoosejs.com/ for details.
 There are many functions implemented for user management in the `services` folder `user.service.js`.
 
-### **Testing**  
+### **Testing**
 
-Here are screenshots of `Postman` testing for the project.    
+Here are screenshots of `Postman` testing for the project.
 
 ![user_register](https://user-images.githubusercontent.com/6191308/141512900-d3aba10c-1949-41f8-ab9a-135a7e6e51e4.png)
 
@@ -209,6 +208,6 @@ Here are screenshots of `Postman` testing for the project.
 
 ![list_notes](https://user-images.githubusercontent.com/6191308/141512947-d550e2a8-99cb-4c51-905b-85a1efdfe0ea.png)
 
+## **Deployment - Staging**
 
-
-
+App is deployed abd configured in `Heroku` cloud server. You can access through `Postman`.
