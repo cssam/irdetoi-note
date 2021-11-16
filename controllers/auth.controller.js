@@ -94,7 +94,7 @@ exports.login = async (req, res, next) => {
     const user = await UserService.findByEmail(req.body.email);
     const token = jwt.sign(
       {
-        userId: user.id,
+        userId: user._id,
       },
       config.jwt_secret,
       { expiresIn: "24h" }
