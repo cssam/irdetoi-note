@@ -6,11 +6,7 @@ const auth_controller = require("../controllers/auth.controller");
 
 router.post("/register", auth_controller.register);
 
-router.post(
-  "/login",
-  //passport.authenticate("local", { session: false }),
-  auth_controller.login
-);
+router.post("/login", auth_controller.login);
 
 router.get(
   "/currentUser",
