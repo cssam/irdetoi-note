@@ -210,7 +210,7 @@ Here are screenshots of `Postman` testing for the project.
 
 ## **Deployment - Staging**
 
-App is deployed abd configured in `Heroku` cloud server. You can access through `Postman`.
+App is deployed and configured in `Heroku` cloud server. You can access through `Postman`.
 ![Heroku - regiter](https://user-images.githubusercontent.com/6191308/141882861-3ff695c5-9b85-4d66-9b68-b1f4952b869a.png)
 
 ![Heroku- add token](https://user-images.githubusercontent.com/6191308/141882921-1d94b66a-bf85-4af9-bcb7-8553f29d7dde.png)
@@ -220,4 +220,25 @@ App is deployed abd configured in `Heroku` cloud server. You can access through 
 ![Heroku - create note](https://user-images.githubusercontent.com/6191308/141882897-b63c683b-a59a-4278-b606-63ae2e637022.png)
 
 ![Heroku - get notes](https://user-images.githubusercontent.com/6191308/141882941-11d271e9-639a-4877-92a4-aa4900950ec6.png)
+
+
+## **Deployment - Staging**
+App is deployed and configured in `AWS Elasticbeanstalk` cloud server. You can access through `Postman`.
+
+![EBS - register](https://user-images.githubusercontent.com/6191308/143487559-33a0b190-a1d5-48b3-923e-6556837c7313.png)
+
+![EBS - login](https://user-images.githubusercontent.com/6191308/143487576-3529e373-6f3c-4915-a26c-40f2ca6a12b8.png)
+
+![EBS - create note](https://user-images.githubusercontent.com/6191308/143487588-1923a78d-bee7-4f95-87b2-eba5424a434e.png)
+
+![EBS - create note](https://user-images.githubusercontent.com/6191308/143487611-fa709c31-74d4-451e-8c78-b90835a5c8f4.png)
+
+![EBS - Env](https://user-images.githubusercontent.com/6191308/143487733-c759ee09-eb56-4abb-8f63-7f00ee825c00.png)
+
+![AWS CodePipeline](https://user-images.githubusercontent.com/6191308/143487840-37a2e668-2783-449f-8b70-039c43f6c209.png)
+
+
+
+
+
 
