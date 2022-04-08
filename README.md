@@ -1,6 +1,6 @@
 ## Web API
 
-# **A NodeJS project of WebAPI**
+# **A NodeJS, AtlasDB, AWS Fargate**
 
 ## **Project Requirement**
 
@@ -53,7 +53,7 @@ Download and install Node.js from https://nodejs.org
 
 ### **Clone the Project**
 
-Clone the project into your local folder from https://github.com/cssam/irdetoi-webapi  
+Clone the project into your local folder from https://github.com/cssam/Lab-Node-Atlas-API  
 <br>
 
 ## **Code Description**
