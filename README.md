@@ -4,7 +4,8 @@
 
 ## **Project Requirement**
 
-Write a server (or Serverless) that implenents a simple RESTful Web API. You can use the language and framework of your choice (Node/Express, Java/Springboot, Python/Flask, or other similar). It is a API that allows to keep track of notes. Each note has the following JSON format,
+A simple RESTful Web API with Node/Express uses AtlasDB and AWS-Fargate.
+It is a API that allows to keep track of notes. Each note has the following JSON format,
 
 ```json
 {
@@ -233,7 +234,6 @@ App is deployed and configured in `AWS Elasticbeanstalk` cloud server. You can a
 
 ![EBS - create note](https://user-images.githubusercontent.com/6191308/143487611-fa709c31-74d4-451e-8c78-b90835a5c8f4.png)
 
-![EBS - Env](https://user-images.githubusercontent.com/6191308/143487733-c759ee09-eb56-4abb-8f63-7f00ee825c00.png)
 
 Deployment Code Pipeline
 [AWS Codepipeline Configuration](https://github.com/cssamLabs/AWS-CodePipeline-Configuration/blob/main/README.md)
