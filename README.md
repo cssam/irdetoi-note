@@ -235,7 +235,8 @@ App is deployed and configured in `AWS Elasticbeanstalk` cloud server. You can a
 
 ![EBS - Env](https://user-images.githubusercontent.com/6191308/143487733-c759ee09-eb56-4abb-8f63-7f00ee825c00.png)
 
-![AWS CodePipeline](https://user-images.githubusercontent.com/6191308/143487840-37a2e668-2783-449f-8b70-039c43f6c209.png)
+Deployment Code Pipeline
+[AWS Codepipeline Configuration](https://github.com/cssamLabs/AWS-CodePipeline-Configuration/blob/main/README.md)
 
 
 
